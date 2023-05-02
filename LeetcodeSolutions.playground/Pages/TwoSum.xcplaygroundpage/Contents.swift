@@ -16,6 +16,22 @@ class Solution {
     }
 }
 
-// Most rated solution
+// Most rated solution: this solution is O(n) while the one that I first wrote was O(n^2)
 
+class Solution {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var dict = [Int: Int]()
 
+        for (index, value) in nums.enumerated() {
+
+            //In this if-statement the software checks if in the dictionary there is already value, because previously we subtracted for every i the target-value creating a new possible complementary inside the dictionary. This means that if there is a value that was already registered inside the dictionary we will return the index of the current value and the one associated with target-value
+            if let addent = dict[value] {
+                return [addent, index]
+            } else {
+                dict[target - value] = index
+            }
+        }
+
+        return []
+    }
+}
