@@ -18,7 +18,7 @@ class Solution {
 
 // Most rated solution: this solution is O(n) while the one that I first wrote was O(n^2)
 
-class Solution {
+class Solution2 {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var dict = [Int: Int]()
 
